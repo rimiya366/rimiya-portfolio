@@ -1679,3 +1679,661 @@ section,
     height: 240px !important;
   }
 }
+/* =========================================================
+   MOBILE RESPONSIVE FIX
+   Portfolio: Rimiya Rimshi K M
+   Add this at the VERY END of assets/css/main.css
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   GENERAL MOBILE RESET
+   --------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .container,
+  .container-fluid {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .main {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  section.section {
+    padding: 55px 0;
+  }
+
+
+  /* -------------------------------------------------------
+     HEADER
+     ------------------------------------------------------- */
+
+  .header {
+    min-height: 64px;
+  }
+
+  .header .container-xl,
+  .header .container-fluid {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .logo .sitename {
+    font-size: 25px;
+  }
+
+  .navmenu {
+    margin: 0;
+  }
+
+  .mobile-nav-toggle {
+    font-size: 28px;
+    margin-right: 0;
+  }
+
+
+  /* -------------------------------------------------------
+     PAGE TITLE
+     ------------------------------------------------------- */
+
+  .page-title {
+    padding-top: 90px;
+  }
+
+  .page-title .heading {
+    padding: 55px 0 35px;
+  }
+
+  .page-title h1 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  .page-title p {
+    font-size: 14px;
+    line-height: 1.8;
+    padding: 0 5px;
+  }
+
+  .breadcrumbs {
+    padding: 12px 0;
+  }
+
+  .breadcrumbs ol {
+    justify-content: center;
+    font-size: 13px;
+  }
+
+
+  /* -------------------------------------------------------
+     SECTION TITLES
+     ------------------------------------------------------- */
+
+  .section-title {
+    padding-bottom: 25px;
+  }
+
+  .section-title h2 {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .section-title div {
+    font-size: 25px;
+    line-height: 1.3;
+  }
+
+  .section-title p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+
+  /* -------------------------------------------------------
+     HEADINGS
+     ------------------------------------------------------- */
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 27px;
+  }
+
+  h3 {
+    font-size: 23px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+
+  /* -------------------------------------------------------
+     HOME / HERO
+     ------------------------------------------------------- */
+
+  .hero {
+    min-height: 100vh;
+    padding: 90px 0 50px;
+  }
+
+  .hero h2 {
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .hero .typed {
+    font-size: 18px;
+  }
+
+  .hero .social-links {
+    margin-top: 20px;
+  }
+
+
+  /* -------------------------------------------------------
+     ABOUT
+     ------------------------------------------------------- */
+
+  .about .content {
+    padding: 0;
+  }
+
+  .about h2 {
+    font-size: 27px;
+    line-height: 1.3;
+  }
+
+  .about p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .about .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .about .col-lg-4,
+  .about .col-lg-8 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+
+  /* -------------------------------------------------------
+     RESUME
+     ------------------------------------------------------- */
+
+  .resume .resume-title {
+    font-size: 21px;
+    margin-top: 25px;
+  }
+
+  .resume .resume-item {
+    padding: 0 0 25px 20px;
+    margin-top: 20px;
+  }
+
+  .resume .resume-item h4 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .resume .resume-item h5 {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+
+  .resume .resume-item p,
+  .resume .resume-item li {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+
+  /* -------------------------------------------------------
+     SERVICES
+     ------------------------------------------------------- */
+
+  .services .service-item {
+    padding: 25px 20px;
+  }
+
+  .services .service-item h3 {
+    font-size: 20px;
+  }
+
+  .services .service-item p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .services .service-item .icon {
+    margin-bottom: 18px;
+  }
+
+
+  /* -------------------------------------------------------
+     PORTFOLIO FILTERS
+     ------------------------------------------------------- */
+
+  .portfolio {
+    padding-top: 25px;
+    padding-bottom: 50px;
+  }
+
+  .portfolio-filters,
+  ul.portfolio-filters {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    gap: 10px 18px !important;
+
+    margin: 0 auto 30px !important;
+    padding: 0 !important;
+
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .portfolio-filters li {
+    font-size: 13px !important;
+    padding-bottom: 5px !important;
+    white-space: nowrap;
+  }
+
+
+  /* -------------------------------------------------------
+     PORTFOLIO GRID
+     ------------------------------------------------------- */
+
+  .portfolio-container {
+    display: grid !important;
+
+    grid-template-columns: 1fr !important;
+
+    gap: 20px !important;
+
+    width: 100% !important;
+    height: auto !important;
+
+    margin: 0 !important;
+  }
+
+  .portfolio-item {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+
+    transform: none !important;
+
+    margin: 0 !important;
+  }
+
+
+  /* -------------------------------------------------------
+     PORTFOLIO CARD
+     ------------------------------------------------------- */
+
+  .portfolio-content {
+    width: 100% !important;
+    min-height: auto !important;
+    height: auto !important;
+
+    padding: 22px 18px 20px !important;
+
+    border-radius: 15px !important;
+
+    overflow: hidden;
+  }
+
+  .portfolio-content:hover {
+    transform: none !important;
+  }
+
+  .portfolio-info {
+    width: 100%;
+  }
+
+  .portfolio-info h4 {
+    font-size: 20px !important;
+    line-height: 1.35 !important;
+
+    margin: 16px 0 10px !important;
+  }
+
+  .portfolio-info p {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+
+    margin-bottom: 15px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     PORTFOLIO PROJECT NUMBER
+     ------------------------------------------------------- */
+
+  .project-number {
+    font-size: 11px !important;
+    letter-spacing: 1.5px !important;
+    margin-bottom: 8px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     PORTFOLIO ICON
+     ------------------------------------------------------- */
+
+  .portfolio-icon-wrapper {
+    width: 145px !important;
+    height: 145px !important;
+
+    margin: 8px auto 15px !important;
+  }
+
+  .portfolio-icon {
+    width: 72px !important;
+    height: 72px !important;
+
+    border-radius: 17px !important;
+  }
+
+  .portfolio-icon i {
+    font-size: 32px !important;
+  }
+
+  .portfolio-icon-wrapper::after {
+    inset: 18px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     PORTFOLIO CATEGORY
+     ------------------------------------------------------- */
+
+  .project-category {
+    font-size: 10px !important;
+    padding: 7px 10px !important;
+
+    max-width: 100%;
+
+    line-height: 1.3;
+  }
+
+
+  /* -------------------------------------------------------
+     PORTFOLIO TAGS
+     ------------------------------------------------------- */
+
+  .project-tags {
+    gap: 6px !important;
+    margin-top: 10px !important;
+    padding-top: 5px !important;
+  }
+
+  .project-tags span {
+    font-size: 10px !important;
+    padding: 5px 8px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     PORTFOLIO BUTTONS
+     ------------------------------------------------------- */
+
+  .portfolio-links {
+    margin-top: 18px !important;
+    padding-top: 15px !important;
+
+    gap: 8px !important;
+
+    flex-wrap: wrap;
+  }
+
+  .portfolio-links a {
+    font-size: 12px !important;
+
+    padding: 8px 13px !important;
+
+    min-height: 36px;
+  }
+
+
+  /* -------------------------------------------------------
+     GITHUB SECTION
+     ------------------------------------------------------- */
+
+  .github-section {
+    padding: 45px 0 60px;
+  }
+
+  .github-cta {
+    padding: 38px 20px !important;
+    border-radius: 15px;
+  }
+
+  .github-cta > i {
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+
+  .github-cta h3 {
+    font-size: 25px !important;
+    line-height: 1.3;
+  }
+
+  .github-cta p {
+    font-size: 14px !important;
+    line-height: 1.7;
+  }
+
+  .github-button {
+    padding: 11px 17px;
+    font-size: 13px;
+  }
+
+
+  /* -------------------------------------------------------
+     CONTACT
+     ------------------------------------------------------- */
+
+  .contact .info-item {
+    padding: 18px;
+  }
+
+  .contact .info-item h3 {
+    font-size: 17px;
+  }
+
+  .contact .info-item p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .contact .info-item .icon {
+    font-size: 25px;
+  }
+
+
+  /* -------------------------------------------------------
+     FOOTER
+     ------------------------------------------------------- */
+
+  .footer {
+    padding: 45px 15px 25px;
+  }
+
+  .footer .sitename {
+    font-size: 25px;
+  }
+
+  .footer p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .footer .social-links {
+    gap: 10px;
+  }
+
+  .footer .copyright {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .footer .credits {
+    font-size: 11px;
+  }
+
+
+  /* -------------------------------------------------------
+     SCROLL TOP
+     ------------------------------------------------------- */
+
+  .scroll-top {
+    width: 38px;
+    height: 38px;
+
+    right: 15px;
+    bottom: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .container,
+  .container-fluid {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .page-title h1 {
+    font-size: 28px;
+  }
+
+  .page-title p {
+    font-size: 13px;
+  }
+
+  .section-title div {
+    font-size: 22px;
+  }
+
+  .portfolio-filters {
+    gap: 8px 13px !important;
+  }
+
+  .portfolio-filters li {
+    font-size: 12px !important;
+  }
+
+  .portfolio-content {
+    padding: 18px 15px !important;
+  }
+
+  .portfolio-icon-wrapper {
+    width: 125px !important;
+    height: 125px !important;
+  }
+
+  .portfolio-icon {
+    width: 62px !important;
+    height: 62px !important;
+  }
+
+  .portfolio-icon i {
+    font-size: 28px !important;
+  }
+
+  .portfolio-info h4 {
+    font-size: 18px !important;
+  }
+
+  .portfolio-info p {
+    font-size: 13px !important;
+  }
+
+  .project-category {
+    font-size: 9px !important;
+  }
+
+  .project-tags span {
+    font-size: 9px !important;
+  }
+
+  .github-cta {
+    padding: 32px 15px !important;
+  }
+
+  .github-cta h3 {
+    font-size: 22px !important;
+  }
+
+}
+
+
+/* =========================================================
+   PREVENT HORIZONTAL OVERFLOW
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  img,
+  video,
+  iframe {
+    max-width: 100%;
+  }
+
+  table {
+    max-width: 100%;
+  }
+
+  pre,
+  code {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .row {
+    --bs-gutter-x: 1.5rem;
+  }
+
+}
