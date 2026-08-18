@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio | Rimiya Rimshi K M | Data Analyst</title>
+
+  <meta name="description"
+    content="Portfolio of Rimiya Rimshi K M - Data Analyst specializing in Power BI, SQL, Python, Business Intelligence, Machine Learning and AI.">
+
+  <meta name="keywords"
+    content="Rimiya Rimshi K M, Data Analyst, Power BI, SQL, Python, Machine Learning, AI, Data Visualization, Business Intelligence">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =====================================================
+       PORTFOLIO CARD DESIGN
+       No project images required
+  ====================================================== -->
+  <style>
+
+    /* ==============================
+       Portfolio Section
+    ============================== */
+
+    .portfolio {
+      padding-top: 40px;
+      padding-bottom: 70px;
+    }
+
+    .portfolio-filters {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 35px;
+      margin: 0 auto 45px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .portfolio-filters li {
+      color: #f5f5f5;
+      font-family: "Poppins", sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    .portfolio-filters li:hover,
+    .portfolio-filters li.filter-active {
+      color: #00e676;
+    }
+
+    .portfolio-filters li.filter-active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: #00e676;
+      border-radius: 10px;
+    }
+
+
+    /* ==============================
+       Project Grid
+    ============================== */
+
+    .portfolio-container {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      position: relative !important;
+      height: auto !important;
+    }
+
+    .portfolio-item {
+      width: 100% !important;
+      position: relative !important;
+      left: auto !important;
+      top: auto !important;
+      transform: none !important;
+      margin: 0 !important;
+    }
+
+
+    /* ==============================
+       Project Card
+    ============================== */
+
+    .portfolio-content {
+      position: relative;
+      min-height: 500px;
+      height: 100%;
+      padding: 28px 28px 24px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      background:
+        radial-gradient(
+          circle at 50% 25%,
+          rgba(0, 230, 118, 0.08),
+          transparent 32%
+        ),
+        linear-gradient(
+          145deg,
+          #0b1210 0%,
+          #0b0f0e 50%,
+          #111111 100%
+        );
+      overflow: hidden;
+      transition: all 0.35s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .portfolio-content::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 230, 118, 0.8),
+        transparent
+      );
+      opacity: 0;
+      transition: 0.35s ease;
+    }
+
+    .portfolio-content:hover {
+      transform: translateY(-8px);
+      border-color: rgba(0, 230, 118, 0.65);
+      box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(0, 230, 118, 0.08);
+    }
+
+    .portfolio-content:hover::before {
+      opacity: 1;
+    }
+
+
+    /* ==============================
+       Number / Category
+    ============================== */
+
+    .project-number {
+      color: rgba(255, 255, 255, 0.4);
+      font-family: "Poppins", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+
+    /* ==============================
+       Icon Area
+    ============================== */
+
+    .portfolio-icon-wrapper {
+      width: 240px;
+      height: 240px;
+      margin: 8px auto 0;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 230, 118, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: radial-gradient(
+        circle,
+        rgba(0, 230, 118, 0.10),
+        rgba(0, 230, 118, 0.02) 50%,
+        transparent 70%
+      );
+    }
+
+    .portfolio-icon-wrapper::after {
+      content: "";
+      position: absolute;
+      inset: 25px;
+      border-radius: 50%;
+      background: rgba(0, 230, 118, 0.03);
+      filter: blur(12px);
+    }
+
+    .portfolio-icon {
+      width: 108px;
+      height: 108px;
+      border-radius: 24px;
+      background: #151515;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      box-shadow:
+        0 0 30px rgba(0, 230, 118, 0.08),
+        inset 0 0 20px rgba(0, 230, 118, 0.02);
+    }
+
+    .portfolio-icon i {
+      color: #00e676;
+      font-size: 48px;
+    }
+
+
+    /* ==============================
+       Category Badge
+    ============================== */
+
+    .project-category {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 9px 15px;
+      margin-top: 2px;
+      border-radius: 30px;
+      background: rgba(0, 230, 118, 0.08);
+      border: 1px solid rgba(0, 230, 118, 0.35);
+      color: #00e676;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+
+    /* ==============================
+       Project Information
+    ============================== */
+
+    .portfolio-info {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .portfolio-info h4 {
+      color: #ffffff;
+      font-family: "Poppins", sans-serif;
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin: 22px 0 12px;
+    }
+
+    .portfolio-info p {
+      color: #929292;
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      line-height: 1.9;
+      margin-bottom: 18px;
+    }
+
+
+    /* ==============================
+       Project Tags
+    ============================== */
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 8px;
+    }
+
+    .project-tags span {
+      display: inline-block;
+      padding: 6px 11px;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.055);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #bdbdbd;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+
+    /* ==============================
+       Buttons
+    ============================== */
+
+    .portfolio-links {
+      display: flex;
+      gap: 10px;
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .portfolio-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 7px;
+      background: transparent;
+      border: 1px solid rgba(0, 230, 118, 0.4);
+      color: #00e676;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .portfolio-links a:hover {
+      background: #00e676;
+      color: #07100b;
+      border-color: #00e676;
+    }
+
+
+    /* ==============================
+       GitHub CTA
+    ============================== */
+
+    .github-section {
+      padding: 70px 0 90px;
+    }
+
+    .github-cta {
+      padding: 55px 30px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(0, 230, 118, 0.07),
+          transparent 55%
+        ),
+        #0d0d0d;
+    }
+
+    .github-cta > i {
+      font-size: 42px;
+      color: #ffffff;
+      margin-bottom: 18px;
+    }
+
+    .github-cta h3 {
+      color: #ffffff;
+      font-size: 34px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .github-cta p {
+      color: #a0a0a0;
+      font-size: 17px;
+      margin-bottom: 25px;
+    }
+
+    .github-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 22px;
+      border-radius: 8px;
+      background: #147ef5;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    .github-button:hover {
+      background: #0b6edb;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+
+    /* ==============================
+       Responsive
+    ============================== */
+
+    @media (max-width: 991px) {
+
+      .portfolio-container {
+        grid-template-columns: 1fr;
+      }
+
+      .portfolio-content {
+        min-height: 480px;
+      }
+
+      .portfolio-icon-wrapper {
+        width: 210px;
+        height: 210px;
+      }
+
+    }
+
+    @media (max-width: 576px) {
+
+      .portfolio {
+        padding-top: 20px;
+      }
+
+      .portfolio-filters {
+        gap: 18px;
+      }
+
+      .portfolio-filters li {
+        font-size: 14px;
+      }
+
+      .portfolio-content {
+        padding: 22px;
+        min-height: 450px;
+      }
+
+      .portfolio-icon-wrapper {
+        width: 180px;
+        height: 180px;
+      }
+
+      .portfolio-icon {
+        width: 90px;
+        height: 90px;
+      }
+
+      .portfolio-icon i {
+        font-size: 38px;
+      }
+
+      .portfolio-info h4 {
+        font-size: 21px;
+      }
+
+      .portfolio-info p {
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .github-cta h3 {
+        font-size: 27px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body class="portfolio-page">
+
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">Rimiya</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+
+        <ul>
+
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+
+          <li>
+            <a href="about.html">About</a>
+          </li>
+
+          <li>
+            <a href="resume.html">Resume</a>
+          </li>
+
+          <li>
+            <a href="services.html">Services</a>
+          </li>
+
+          <li>
+            <a href="portfolio.html" class="active">Portfolio</a>
+          </li>
+
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+
+        </ul>
+
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main class="main">
+
+
+    <!-- =========================
+         PAGE TITLE
+    ========================== -->
+
+    <div class="page-title" data-aos="fade">
+
+      <div class="heading">
+
+        <div class="container">
+
+          <div class="row d-flex justify-content-center text-center">
+
+            <div class="col-lg-8">
+
+              <h1>Portfolio</h1>
+
+              <p class="mb-0">
+                A collection of data analytics, business intelligence,
+                machine learning and AI projects focused on transforming
+                data into meaningful insights and practical solutions.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <nav class="breadcrumbs">
+
+        <div class="container">
+
+          <ol>
+
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+
+            <li class="current">
+              Portfolio
+            </li>
+
+          </ol>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+
+    <!-- =========================
+         PORTFOLIO
+    ========================== -->
+
+    <section id="portfolio" class="portfolio section">
+
+      <div class="container">
+
+        <!-- FILTERS -->
+
+        <ul class="portfolio-filters isotope-filters"
+          data-aos="fade-up">
+
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-powerbi">Power BI</li>
+          <li data-filter=".filter-python">Python</li>
+          <li data-filter=".filter-sql">SQL</li>
+          <li data-filter=".filter-ml">Machine Learning</li>
+          <li data-filter=".filter-ai">AI</li>
+
+        </ul>
+
+
+        <!-- PROJECTS -->
+
+        <div class="portfolio-container isotope-container"
+          data-aos="fade-up"
+          data-aos-delay="100">
+
+
+          <!-- =====================================================
+               PROJECT 1
+          ====================================================== -->
+
+          <div class="portfolio-item isotope-item filter-powerbi">
+
+            <div class="portfolio-content">
+
+              <div class="portfolio-info">
+
+                <div class="project-number">
+                  01 / POWER BI
+                </div>
+
+                <div class="portfolio-icon-wrapper">
+
+                  <div class="portfolio-icon">
+                    <i class="bi bi-bar-chart-fill"></i>
+                  </div>
+
+                </div>
+
+                <span class="project-category">
+                  Power BI / Business Intelligence
+                </span>
+
+                <h4>
+                  Power BI Data Analytics Dashboard
+                </h4>
+
+                <p>
+                  Interactive business intelligence dashboard designed
+                  to transform raw data into meaningful visual insights
+                  and support data-driven decision making.
+                </p>
+
+                <div class="project-tags">
+                  <span>Power BI</span>
+                  <span>DAX</span>
+                  <span>Data Visualization</span>
+                </div>
+
+              </div>
+
+              <div class="portfolio-links">
+
+                <a
+                  href="https://github.com/rimiya366"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="View Project">
+
+                  <i class="bi bi-eye"></i>
+                  View Project
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- =====================================================
+               PROJECT 2
+          ====================================================== -->
+
+          <div class="portfolio-item isotope-item filter-python filter-ml">
+
+            <div class="portfolio-content">
+
+              <div class="portfolio-info">
+
+                <div class="project-number">
+                  02 / PYTHON • ML
+                </div>
+
+                <div class="portfolio-icon-wrapper">
+
+                  <div class="portfolio-icon">
+                    <i class="bi bi-graph-up-arrow"></i>
+                  </div>
+
+                </div>
+
+                <span class="project-category">
+                  Python / Machine Learning
+                </span>
+
+                <h4>
+                  Machine Learning Data Analysis
+                </h4>
+
+                <p>
+                  Machine learning project involving data preprocessing,
+                  exploratory analysis, feature engineering and model
+                  development to generate predictive insights.
+                </p>
+
+                <div class="project-tags">
+                  <span>Python</span>
+                  <span>Pandas</span>
+                  <span>Machine Learning</span>
+                </div>
+
+              </div>
+
+              <div class="portfolio-links">
+
+                <a
+                  href="https://github.com/rimiya366"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="GitHub">
+
+                  <i class="bi bi-github"></i>
+                  GitHub
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- =====================================================
+               PROJECT 3
+          ====================================================== -->
+
+          <div class="portfolio-item isotope-item filter-sql">
+
+            <div class="portfolio-content">
+
+              <div class="portfolio-info">
+
+                <div class="project-number">
+                  03 / SQL
+                </div>
+
+                <div class="portfolio-icon-wrapper">
+
+                  <div class="portfolio-icon">
+                    <i class="bi bi-database-fill"></i>
+                  </div>
+
+                </div>
+
+                <span class="project-category">
+                  SQL / Data Analysis
+                </span>
+
+                <h4>
+                  SQL Data Analysis
+                </h4>
+
+                <p>
+                  SQL-based analytical project focused on querying,
+                  cleaning, transforming and analyzing structured
+                  datasets to uncover useful business insights.
+                </p>
+
+                <div class="project-tags">
+                  <span>SQL</span>
+                  <span>Data Analysis</span>
+                  <span>Database</span>
+                </div>
+
+              </div>
+
+              <div class="portfolio-links">
+
+                <a
+                  href="https://github.com/rimiya366"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="GitHub">
+
+                  <i class="bi bi-github"></i>
+                  GitHub
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- =====================================================
+               PROJECT 4
+          ====================================================== -->
+
+          <div class="portfolio-item isotope-item filter-python">
+
+            <div class="portfolio-content">
+
+              <div class="portfolio-info">
+
+                <div class="project-number">
+                  04 / PYTHON
+                </div>
+
+                <div class="portfolio-icon-wrapper">
+
+                  <div class="portfolio-icon">
+                    <i class="bi bi-file-earmark-bar-graph-fill"></i>
+                  </div>
+
+                </div>
+
+                <span class="project-category">
+                  Python / Exploratory Analysis
+                </span>
+
+                <h4>
+                  Exploratory Data Analysis
+                </h4>
+
+                <p>
+                  Python-based exploratory data analysis project
+                  focused on understanding datasets, identifying
+                  patterns, handling missing values and visualizing
+                  important trends.
+                </p>
+
+                <div class="project-tags">
+                  <span>Python</span>
+                  <span>Pandas</span>
+                  <span>Matplotlib</span>
+                </div>
+
+              </div>
+
+              <div class="portfolio-links">
+
+                <a
+                  href="https://github.com/rimiya366"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="GitHub">
+
+                  <i class="bi bi-github"></i>
+                  GitHub
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- =====================================================
+               PROJECT 5
+          ====================================================== -->
+
+          <div class="portfolio-item isotope-item filter-ai">
+
+            <div class="portfolio-content">
+
+              <div class="portfolio-info">
+
+                <div class="project-number">
+                  05 / AI
+                </div>
+
+                <div class="portfolio-icon-wrapper">
+
+                  <div class="portfolio-icon">
+                    <i class="bi bi-robot"></i>
+                  </div>
+
+                </div>
+
+                <span class="project-category">
+                  Artificial Intelligence
+                </span>
+
+                <h4>
+                  AI & Intelligent Data Solution
+                </h4>
+
+                <p>
+                  AI-focused project exploring intelligent data
+                  processing and practical applications of artificial
+                  intelligence to solve real-world problems.
+                </p>
+
+                <div class="project-tags">
+                  <span>Python</span>
+                  <span>AI</span>
+                  <span>Data</span>
+                </div>
+
+              </div>
+
+              <div class="portfolio-links">
+
+                <a
+                  href="https://github.com/rimiya366"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="GitHub">
+
+                  <i class="bi bi-github"></i>
+                  GitHub
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- =====================================================
+               PROJECT 6
+          ====================================================== -->
+
+          <div class="portfolio-item isotope-item filter-powerbi filter-sql">
+
+            <div class="portfolio-content">
+
+              <div class="portfolio-info">
+
+                <div class="project-number">
+                  06 / BI • SQL
+                </div>
+
+                <div class="portfolio-icon-wrapper">
+
+                  <div class="portfolio-icon">
+                    <i class="bi bi-pie-chart-fill"></i>
+                  </div>
+
+                </div>
+
+                <span class="project-category">
+                  Power BI / SQL
+                </span>
+
+                <h4>
+                  Business Intelligence Dashboard
+                </h4>
+
+                <p>
+                  End-to-end analytics solution combining structured
+                  data, SQL analysis and interactive Power BI
+                  visualizations to communicate business performance.
+                </p>
+
+                <div class="project-tags">
+                  <span>Power BI</span>
+                  <span>SQL</span>
+                  <span>DAX</span>
+                </div>
+
+              </div>
+
+              <div class="portfolio-links">
+
+                <a
+                  href="https://github.com/rimiya366"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="View Project">
+
+                  <i class="bi bi-eye"></i>
+                  View Project
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- =====================================================
+               PROJECT 7
+          ====================================================== -->
+
+          <div class="portfolio-item isotope-item filter-python filter-ai">
+
+            <div class="portfolio-content">
+
+              <div class="portfolio-info">
+
+                <div class="project-number">
+                  07 / PYTHON • AI
+                </div>
+
+                <div class="portfolio-icon-wrapper">
+
+                  <div class="portfolio-icon">
+                    <i class="bi bi-cpu-fill"></i>
+                  </div>
+
+                </div>
+
+                <span class="project-category">
+                  Python / Artificial Intelligence
+                </span>
+
+                <h4>
+                  Python AI Project
+                </h4>
+
+                <p>
+                  Python-based artificial intelligence project combining
+                  programming, data processing and intelligent analysis
+                  to build a practical data-driven solution.
+                </p>
+
+                <div class="project-tags">
+                  <span>Python</span>
+                  <span>AI</span>
+                  <span>Data Science</span>
+                </div>
+
+              </div>
+
+              <div class="portfolio-links">
+
+                <a
+                  href="https://github.com/rimiya366"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="GitHub">
+
+                  <i class="bi bi-github"></i>
+                  GitHub
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- =====================================================
+               PROJECT 8
+          ====================================================== -->
+
+          <div class="portfolio-item isotope-item filter-ml filter-python">
+
+            <div class="portfolio-content">
+
+              <div class="portfolio-info">
+
+                <div class="project-number">
+                  08 / ML • PYTHON
+                </div>
+
+                <div class="portfolio-icon-wrapper">
+
+                  <div class="portfolio-icon">
+                    <i class="bi bi-diagram-3-fill"></i>
+                  </div>
+
+                </div>
+
+                <span class="project-category">
+                  Predictive Analytics
+                </span>
+
+                <h4>
+                  Predictive Analytics Project
+                </h4>
+
+                <p>
+                  Predictive analytics workflow covering data
+                  preparation, exploratory analysis, model training
+                  and evaluation to derive actionable predictions.
+                </p>
+
+                <div class="project-tags">
+                  <span>Python</span>
+                  <span>Machine Learning</span>
+                  <span>Analytics</span>
+                </div>
+
+              </div>
+
+              <div class="portfolio-links">
+
+                <a
+                  href="https://github.com/rimiya366"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="GitHub">
+
+                  <i class="bi bi-github"></i>
+                  GitHub
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- =====================================================
+               PROJECT 9
+          ====================================================== -->
+
+          <div class="portfolio-item isotope-item filter-python filter-sql">
+
+            <div class="portfolio-content">
+
+              <div class="portfolio-info">
+
+                <div class="project-number">
+                  09 / PYTHON • SQL
+                </div>
+
+                <div class="portfolio-icon-wrapper">
+
+                  <div class="portfolio-icon">
+                    <i class="bi bi-database-check"></i>
+                  </div>
+
+                </div>
+
+                <span class="project-category">
+                  Data Cleaning / Transformation
+                </span>
+
+                <h4>
+                  Data Cleaning & Transformation
+                </h4>
+
+                <p>
+                  Data preparation project focused on cleaning,
+                  transforming and organizing raw datasets before
+                  performing analysis and visualization.
+                </p>
+
+                <div class="project-tags">
+                  <span>Python</span>
+                  <span>SQL</span>
+                  <span>Data Cleaning</span>
+                </div>
+
+              </div>
+
+              <div class="portfolio-links">
+
+                <a
+                  href="https://github.com/rimiya366"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="GitHub">
+
+                  <i class="bi bi-github"></i>
+                  GitHub
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         GITHUB CTA
+    ========================== -->
+
+    <section id="github" class="github-section section">
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-9 text-center" data-aos="fade-up">
+
+            <div class="github-cta">
+
+              <i class="bi bi-github"></i>
+
+              <h3>
+                Explore More on GitHub
+              </h3>
+
+              <p>
+                Explore my repositories, experiments and
+                data projects on GitHub.
+              </p>
+
+              <a
+                href="https://github.com/rimiya366"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-button">
+
+                <i class="bi bi-github"></i>
+                Visit My GitHub
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container">
+
+      <h3 class="sitename">
+        Rimiya Rimshi K M
+      </h3>
+
+      <p>
+        Data Analyst passionate about transforming data into
+        insights through analytics, visualization, machine learning
+        and AI.
+      </p>
+
+      <div class="social-links d-flex justify-content-center">
+
+        <a
+          href="https://github.com/rimiya366"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub">
+
+          <i class="bi bi-github"></i>
+
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/rimiya-rimshi-k-m"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn">
+
+          <i class="bi bi-linkedin"></i>
+
+        </a>
+
+      </div>
+
+      <div class="container">
+
+        <div class="copyright">
+
+          <span>Copyright</span>
+
+          <strong class="px-1 sitename">
+            Rimiya Rimshi K M
+          </strong>
+
+          <span>All Rights Reserved</span>
+
+        </div>
+
+        <div class="credits">
+
+          Designed by
+          <a href="https://bootstrapmade.com/" target="_blank">
+            BootstrapMade
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- Scroll Top -->
+
+  <a
+    href="#"
+    id="scroll-top"
+    class="scroll-top d-flex align-items-center justify-content-center">
+
+    <i class="bi bi-arrow-up-short"></i>
+
+  </a>
+
+
+  <!-- Preloader -->
+
+  <div id="preloader"></div>
+
+
+  <!-- Vendor JS -->
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS -->
+
+  <script src="assets/js/main.js"></script>
+
+
+  <!-- Portfolio Filter -->
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const filters = document.querySelectorAll(".portfolio-filters li");
+      const items = document.querySelectorAll(".portfolio-item");
+
+      filters.forEach(filter => {
+
+        filter.addEventListener("click", function () {
+
+          filters.forEach(item => {
+            item.classList.remove("filter-active");
+          });
+
+          this.classList.add("filter-active");
+
+          const filterValue = this.getAttribute("data-filter");
+
+          items.forEach(item => {
+
+            if (
+              filterValue === "*" ||
+              item.classList.contains(filterValue.substring(1))
+            ) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+
+          });
+
+        });
+
+      });
+
+    });
+
+  </script>
+
+
+</body>
+
+</html>
